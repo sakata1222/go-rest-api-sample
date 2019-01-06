@@ -10,6 +10,7 @@ import (
 	runtime "github.com/go-openapi/runtime"
 	middleware "github.com/go-openapi/runtime/middleware"
 
+	"github.com/sakata1222/go-rest-api-sample/models"
 	"github.com/sakata1222/go-rest-api-sample/restapi/operations"
 )
 
@@ -34,7 +35,7 @@ func configureAPI(api *operations.SampleAPI) http.Handler {
 	api.JSONProducer = runtime.JSONProducer()
 
 	api.GetUserUserIDHandler = operations.GetUserUserIDHandlerFunc(func(params operations.GetUserUserIDParams) middleware.Responder {
-		return middleware.NotImplemented("operation .GetUserUserID has not yet been implemented")
+		return operations.NewGetUserUserIDOK().WithPayload(&models.User{ID: params.UserID, Name: "Dummy User!!"})
 	})
 
 	api.ServerShutdown = func() {}

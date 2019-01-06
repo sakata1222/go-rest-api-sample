@@ -47,19 +47,23 @@ func init() {
           "200": {
             "description": "Response",
             "schema": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer",
-                  "format": "int64"
-                },
-                "name": {
-                  "type": "string",
-                  "example": "name"
-                }
-              }
+              "$ref": "#/definitions/User"
             }
           }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string",
+          "example": "name"
         }
       }
     }
@@ -95,19 +99,23 @@ func init() {
           "200": {
             "description": "Response",
             "schema": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer",
-                  "format": "int64"
-                },
-                "name": {
-                  "type": "string",
-                  "example": "name"
-                }
-              }
+              "$ref": "#/definitions/User"
             }
           }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string",
+          "example": "name"
         }
       }
     }
