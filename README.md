@@ -1,4 +1,4 @@
-# REST API Server wit Go
+# REST API Server with Go
 
 ## Initialize project
 
